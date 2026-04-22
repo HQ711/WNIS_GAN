@@ -32,7 +32,6 @@ interview_gan_p1/
 │       └── p1_4_spherical_grid.npz
 └── sample/
     ├── sample_reader.py
-    └── sample_shapes.txt
 ```
 
 ## Data
@@ -50,7 +49,7 @@ Each `.npz` file contains frame-wise radar-related arrays such as:
 - `frame_indices`
 - `range_vals`
 
-Please see `sample/sample_reader.py` and `sample/sample_shapes.txt` for a
+Please see `sample/sample_reader.py` for a
 minimal format example.
 
 ## Required Task
