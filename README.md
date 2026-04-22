@@ -53,14 +53,6 @@ Each `.npz` file contains frame-wise radar-related arrays such as:
 Please see `sample/sample_reader.py` and `sample/sample_shapes.txt` for a
 minimal format example.
 
-In this package, the anonymized P1 recordings were prepared as:
-
-- `p1_1`: one full P1 training recording
-- `p1_2`: one full P1 training recording
-- `p1_3`: one full P1 training recording
-- `p1_4`: one held-out P1 validation recording formed by concatenating ten
-  shorter seated-posture segments
-
 ## Required Task
 
 Please implement a pipeline that includes:
