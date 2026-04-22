@@ -1,4 +1,4 @@
-# Interview Task: GAN for Single-Driver Motion Relation Learning
+# Interview Task: GAN for Single-Target Motion Relation Learning
 
 ## Background
 
