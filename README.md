@@ -31,27 +31,35 @@ interview_gan_p1/
 │   └── val/
 │       └── p1_4_spherical_grid.npz
 └── sample/
-    ├── sample_reader.py
+    ├── read_grid_example.py
 ```
 
 ## Data
 
-Each `.npz` file contains frame-wise radar-related arrays such as:
+Each `.npz` file contains frame-wise radar-related arrays. The primary coordinate fields are:
 
 - `velocity`
 - `display_up_down_deg`
 - `display_left_right_deg`
-- `world_up_down_deg`
-- `world_left_right_deg`
-- `board_elevation_deg`
-- `board_azimuth_deg`
 - `power_db`
 - `frame_indices`
 - `range_vals`
 
-Please see `sample/sample_reader.py` for a
-minimal format example.
+For backward compatibility, some files may also include:
 
+- `world_up_down_deg`
+- `world_left_right_deg`
+
+Optional metadata fields may include:
+
+- `board_elevation_deg`
+- `board_azimuth_deg`
+
+Please see `sample/read_grid_example.py` for a
+minimal format example.
+The provided reader primarily uses display-aligned coordinates
+(`display_up_down_deg`, `display_left_right_deg`).
+Legacy world-coordinate fields may still exist for backward compatibility.
 ## Required Task
 
 Please implement a pipeline that includes:
